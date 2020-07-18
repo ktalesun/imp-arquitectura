@@ -1,10 +1,12 @@
-package com.udc.repository.adapter.dto;
+package com.udc.repository.adapter;
 
-import org.reactivecommons.utils.ObjectMapper;
+import com.udc.repository.adapter.dto.CursoData;
+import com.udc.repository.adapter.gateway.CursoDataRepository;
 import com.udc.repository.model.Curso;
 import com.udc.repository.model.Docente;
 import com.udc.repository.model.gateway.CursoRepository;
 import com.udc.repository.utils.AdapterOperation;
+import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;
 
 @Repository

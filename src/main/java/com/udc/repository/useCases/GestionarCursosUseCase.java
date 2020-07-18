@@ -1,4 +1,4 @@
-package com.udc.repository.usecases;
+package com.udc.repository.useCases;
 
 import com.udc.repository.model.Curso;
 import com.udc.repository.model.gateway.CursoRepository;
