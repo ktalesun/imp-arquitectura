@@ -1,7 +1,7 @@
 package com.udc.repository.receiver.rest.controller;
 
-import com.udc.repository.adapter.dto.CursoData;
-import com.udc.repository.adapter.dto.DocenteData;
+import com.udc.repository.adapter.mysql.dto.CursoData;
+import com.udc.repository.adapter.mysql.dto.DocenteData;
 import com.udc.repository.model.factories.FabricaDocente;
 import com.udc.repository.model.factories.ModelFactory;
 import com.udc.repository.useCases.GestionarCursosUseCase;

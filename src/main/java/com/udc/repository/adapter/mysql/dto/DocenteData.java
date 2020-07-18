@@ -1,4 +1,4 @@
-package com.udc.repository.adapter.dto;
+package com.udc.repository.adapter.mysql.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

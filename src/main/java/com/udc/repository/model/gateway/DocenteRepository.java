@@ -1,6 +1,6 @@
 package com.udc.repository.model.gateway;
 
-import com.udc.repository.adapter.dto.DocenteData;
+import com.udc.repository.adapter.mysql.dto.DocenteData;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

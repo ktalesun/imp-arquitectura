@@ -1,7 +1,7 @@
-package com.udc.repository.adapter;
+package com.udc.repository.adapter.mysql;
 
-import com.udc.repository.adapter.dto.CursoData;
-import com.udc.repository.adapter.gateway.CursoDataRepository;
+import com.udc.repository.adapter.mysql.dto.CursoData;
+import com.udc.repository.adapter.mysql.gateway.CursoDataRepository;
 import com.udc.repository.model.Curso;
 import com.udc.repository.model.Docente;
 import com.udc.repository.model.gateway.CursoRepository;
