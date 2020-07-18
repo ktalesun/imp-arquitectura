@@ -1,5 +1,10 @@
+/*
+ *
+ * */
+
 package com.udc.repository.model.factories;
 
+import com.udc.repository.model.Administrador;
 import com.udc.repository.model.Curso;
 import com.udc.repository.model.Docente;
 
@@ -14,9 +19,18 @@ public class ModelFactory {
                 .build();
     }
 
-    public static Docente fabricarDocente() {
-        return Docente
+    public static Administrador fabricarAdministrador(Long id, String nombre, String apellido, String correo,
+                                                      String contrasena, boolean status, String cargo, String dependencia) {
+        return Administrador
                 .builder()
+                .id(id)
+                .nombre(nombre)
+                .apellido(apellido)
+                .correo(correo)
+                .contrasena(contrasena)
+                .estado(status)
+                .cargo(cargo)
+                .dependencia(dependencia)
                 .build();
     }
 }

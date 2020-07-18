@@ -1,6 +1,6 @@
 package com.udc.repository.adapter.dto;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.reactivecommons.utils.ObjectMapper;
 import com.udc.repository.model.Curso;
 import com.udc.repository.model.Docente;
 import com.udc.repository.model.gateway.CursoRepository;
@@ -9,8 +9,11 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class CursoRepositoryAdapter extends AdapterOperation<Curso, CursoData, Long, CursoDataRepository> implements CursoRepository {
+    private static ObjectMapper mapper;
+
     public CursoRepositoryAdapter(CursoDataRepository repository, ObjectMapper mapper) {
         super(repository, mapper, CursoRepositoryAdapter::toEntity);
+        this.mapper = mapper;
     }
 
     public static Curso toEntity(CursoData data) {
@@ -19,13 +22,7 @@ public class CursoRepositoryAdapter extends AdapterOperation<Curso, CursoData, L
                 .periodo(data.getPeriodo())
                 .ano(data.getAno())
                 .id(data.getId())
-                .docente(
-                        Docente.builder()
-                                .id(data.getDocente().getId())
-                                .nombre(data.getDocente().getNombre())
-                                .apellido(data.getDocente().getApellido())
-                                .estado(data.getDocente().isEstado())
-                                .build())
+                .docente(mapper.mapBuilder(data.getDocente(), Docente.DocenteBuilder.class).build())
                 .build();
     }
 }

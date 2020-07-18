@@ -29,4 +29,6 @@ public class DocenteData {
     private String contrasena;
     @NotBlank
     private boolean estado;
+    @NotBlank
+    private String codigo;
 }

@@ -1,9 +1,8 @@
 package com.udc.repository.utils;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.io.StringReader;
 import java.lang.reflect.ParameterizedType;
 import java.util.function.Function;
 
@@ -28,16 +27,7 @@ public abstract class AdapterOperation<E, D, I, R extends JpaRepository<D, I>> {
     }
 
     protected D toData(E entity) {
-        try {
-            ObjectMapper mapper = new ObjectMapper();
-            String obj = mapper.writeValueAsString(entity);
-            obj = obj.replace("\"className\":\"" + entity.getClass().getSimpleName().toLowerCase() + "\"", "\"className\":\"" + dataClass.getSimpleName().toLowerCase() + "\"");
-            return new ObjectMapper().readValue(new StringReader(obj), dataClass);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return null;
+        return mapper.map(entity, dataClass);
     }
 
     protected D saveData(D data) {
