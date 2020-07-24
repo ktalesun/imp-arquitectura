@@ -24,7 +24,7 @@ public class CourseController {
     ObjectMapper mapper;
 
     @PostMapping("/course")
-    public CursoData createNote(@RequestBody CursoData cursoData) {
+    public CursoData createCurso(@RequestBody CursoData cursoData) {
         DocenteData docenteData = cursoData.getDocente();
         return mapper.map(gestionarCursosUseCase.crearCurso(
                 ModelFactory.fabricarCurso(
