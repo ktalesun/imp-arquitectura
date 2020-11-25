@@ -1,0 +1,43 @@
+<nz-layout>
+  <nz-header>
+    <div class="logo"></div>
+    <div class="inline-menu">
+      <a nz-button nzType="link" nzBlock routerLink="/auth/login">Login</a>
+    </div>
+  </nz-header>
+
+  <nz-content>
+    <nz-row class="inner-content" nzAlign="middle" nzJustify="center">
+      <nz-col nzXl="12" nzMd="16" nzXs="22">
+        <div class="inner-content__logo">
+          LOGO
+        </div>
+
+        <div class="example-input">
+          <nz-input-group nzSize="large" [nzSuffix]="suffixIcon">
+            <input placeholder="Buscar" nz-input [(ngModel)]="inputValue" (ngModelChange)="onChange($event)"/>
+          </nz-input-group>
+          <ng-template #suffixIcon>
+            <i nz-icon nzType="search"></i>
+          </ng-template>
+          <!--  <nz-autocomplete #auto>-->
+          <!--    <nz-auto-optgroup *ngFor="let group of optionGroups" [nzLabel]="groupTitle">-->
+          <!--      <ng-template #groupTitle>-->
+          <!--            <span-->
+          <!--            >{{ group.title }}-->
+          <!--              <a class="more-link" href="https://www.google.com/search?q=ng+zorro" target="_blank">更多</a>-->
+          <!--            </span>-->
+          <!--      </ng-template>-->
+          <!--      <nz-auto-option *ngFor="let option of group.children" [nzLabel]="option.title" [nzValue]="option.title">-->
+          <!--        {{ option.title }}-->
+          <!--        <span class="certain-search-item-count">{{ option.count }} 人 关注</span>-->
+          <!--      </nz-auto-option>-->
+          <!--    </nz-auto-optgroup>-->
+          <!--  </nz-autocomplete>-->
+        </div>
+      </nz-col>
+    </nz-row>
+  </nz-content>
+
+  <nz-footer>Repository ©2020 Implement By Kevin León</nz-footer>
+</nz-layout>

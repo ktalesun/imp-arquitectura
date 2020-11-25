@@ -1,0 +1,33 @@
+nz-footer {
+  text-align: center;
+  height: 70px;
+}
+
+nz-header {
+  background-color: #ffffff;
+
+  .inline-menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+
+    & a {
+      width: fit-content;
+    }
+  }
+}
+
+.inner-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
+  height: calc(100vh - 134px);
+
+  &__logo {
+    min-height: 20vh;
+    background-color: #c5f1ff;
+  }
+}
