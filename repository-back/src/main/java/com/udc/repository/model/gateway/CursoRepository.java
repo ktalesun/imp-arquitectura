@@ -5,4 +5,6 @@ import org.springframework.stereotype.Repository;
 
 public interface CursoRepository {
     Curso save(Curso curso);
+
+    Curso findById(Long id);
 }

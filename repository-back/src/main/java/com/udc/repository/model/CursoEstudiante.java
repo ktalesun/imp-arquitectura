@@ -15,4 +15,6 @@ public class CursoEstudiante {
     private Long id;
     private Long idCurso;
     private Long idEstudiante;
+    private Curso curso;
+    private Estudiante estudiante;
 }

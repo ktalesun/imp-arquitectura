@@ -27,4 +27,9 @@ public class CursoRepositoryAdapter extends AdapterOperation<Curso, CursoData, L
                 .docente(mapper.mapBuilder(data.getDocente(), Docente.DocenteBuilder.class).build())
                 .build();
     }
+
+    @Override
+    public Curso findById(Long id) {
+        return null;
+    }
 }
